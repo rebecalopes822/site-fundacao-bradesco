@@ -1,0 +1,45 @@
+body {
+    font-family: monospace; /* família de fonte para o corpo */
+}
+
+ul {
+    font-family: helvetica; /* estilo para lista ordenada */
+}
+
+li {
+    list-style: circle; /* estilo para item da lista */
+}
+
+.list {
+    list-style: square; /* estilo para a classe list */
+}
+
+#msg {
+    font-family: monospace; /* familia de fonte para o parágrafo */
+}
+
+.light-theme {
+    color: #000000; /* cor para tema claro */
+    background: #e0a3f3; /* cor do fundo */
+}
+
+:root { /* variáveis para cores */
+    --green: #e0a3f3;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+.dark-theme { /* se o cody tiver com classe para tema escuro */
+    --bg: var(--black); /* cor de fundo */
+    --fontColor: var(--green); /* cor do texto */
+}
+
+* { /* seleciona todos os elementos do doc */
+    color: var(--fontColor); 
+    font-family: helvetica;
+}
+
+body { 
+    background: var(--bg); /* cor de fundo para o body */
+}
+
