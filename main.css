@@ -1,4 +1,22 @@
-body {
+:root { /* variáveis globais para cores */
+    --purple: #e0a3f3; 
+    --white: #ffffff;
+    --black: #000000; 
+}
+
+.light-theme { 
+    --bg: var(--purple); /* cor de fundo para o tema claro */
+    --fontColor: var(--black); /* cor do texto para o tema claro */
+}
+
+.dark-theme { 
+    --bg: var(--black); /* cor de fundo para o tema escuro */
+    --fontColor: var(--purple); /* cor do texto para o tema escuro */
+}
+
+body { 
+    background: var(--bg); /* aplicar a cor de fundo */
+    color: var(--fontColor); /* aplicar a cor do texto */
     font-family: monospace; /* família de fonte para o corpo */
 }
 
@@ -15,31 +33,22 @@ li {
 }
 
 #msg {
-    font-family: monospace; /* familia de fonte para o parágrafo */
+    font-family: monospace; /* família de fonte para o parágrafo */
 }
 
-.light-theme {
-    color: #000000; /* cor para tema claro */
-    background: #e0a3f3; /* cor do fundo */
+.btn {
+    color: white; /* cor do texto do botão */
+    background-color: purple; /* cor de fundo do botão */
+    position: absolute; /* posiciona de forma absoluta em relação ao seu contêiner pai mais próximo posicionado */
+    top: 20px; /* posição do botão a 20px do topo do contêiner pai */
+    left: 250px; /* posição do botão a 250px da esquerda do contêiner pai */
+    height: 50px; /* altura do botão como 50px */
+    width: 50px; /* largura do botão como 50px */
+    border-radius: 50%; /* bordas do botão como totalmente arredondadas, tornando o botão circular */
+    border: none; /* remove qualquer borda padrão do botão */
 }
 
-:root { /* variáveis para cores */
-    --green: #e0a3f3;
-    --white: #ffffff;
-    --black: #000000;
-}
 
-.dark-theme { /* se o cody tiver com classe para tema escuro */
-    --bg: var(--black); /* cor de fundo */
-    --fontColor: var(--green); /* cor do texto */
+.btn:focus { 
+    outline-style: none; /* elimina o contorno retangular quando o botão for selecionado */
 }
-
-* { /* seleciona todos os elementos do doc */
-    color: var(--fontColor); 
-    font-family: helvetica;
-}
-
-body { 
-    background: var(--bg); /* cor de fundo para o body */
-}
-
